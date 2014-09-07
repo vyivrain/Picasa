@@ -1,0 +1,6 @@
+<%= image_tag params[:photo_url] %>
+
+<% @comments.each do |comment| %>
+	<%= render "comment", locals: { user: comment } %>
+<% end %>
+<%= render partial: "comments_form", locals: { photo_id: @photo_id } %>

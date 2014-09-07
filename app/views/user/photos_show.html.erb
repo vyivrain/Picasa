@@ -1,0 +1,9 @@
+<h1>Album <%= params[:album_name] %></h1>
+
+<% @photos.each do |photo| %>
+	<span style="margin-right:2em;"><%= link_to image_tag(photo), comments_path( photo_url: photo ) %></span>
+<% end %>
+
+<div>
+	<%= link_to "Back", show_user_path %>
+</div>

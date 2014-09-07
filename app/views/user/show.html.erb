@@ -1,0 +1,9 @@
+<%= notice %>
+<h3>Hello there <%= @user.name %></h3>
+
+<p> Here are your albums </p>
+<% @albums.each do |album|  %>
+	<div>
+		<%= link_to album.last, album_photos_path( album_id: album.first, album_name: album.last ) %>
+	</div>
+<% end %>

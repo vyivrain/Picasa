@@ -1,0 +1,11 @@
+<%= image_tag @photo_url %>
+
+<h1>Listing comments</h1>
+
+<div class = "renderComments">
+  <%= render partial: "comment", collection: @comments %>
+</div>
+
+<%= render partial: "form", locals: { photo_id: @photo_id } %>
+
+<%= link_to "Back", album_photos_path %>
